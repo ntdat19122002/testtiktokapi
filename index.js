@@ -20,8 +20,12 @@ app.get('/oauth', (req, res) => {
     url += '?client_key={aw5cjom88mydv3vk}';
     url += '&scope=user.info.basic';
     url += '&response_type=code';
-    url += '&redirect_uri={https://odoo.website/tiktok/instafeed/finalize/}';
+    url += '&redirect_uri={https://test-tiktok-api.onrender.com/auth/}';
     url += '&state=' + csrfState;
 
     res.redirect(url);
+})
+
+app.get('/auth', (req,res) => {
+    res.send('oke')
 })
